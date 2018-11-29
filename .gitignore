@@ -3,3 +3,4 @@
 .cache
 bin
 vendor
+fabrik-config*

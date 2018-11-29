@@ -184,7 +184,7 @@ func Process(log *log.Entry, stop <-chan struct{}, event types.GitHubEvent, repo
 		// fetch stack and parameter files from repoistory
 		// pipeline.json - CI/CD pipeline stack spec
 		// parameters.json - stack parameters
-		context, err := buildContext(event, repo, "pipeline.json", "parameters.json")
+		context, err := buildContext(event, repo, "fabrik/pipeline.json", "fabrik/parameters.json")
 		if err != nil {
 			result <- err
 			return

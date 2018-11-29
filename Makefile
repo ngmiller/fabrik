@@ -1,4 +1,4 @@
-IMAGE = fabrik:build
+IMAGE = ngmiller/fabrik:build
 GOPATH = /go/src/github.com/ngmiller/fabrik
 FUNC = nothing
 
@@ -39,6 +39,10 @@ build-func:
 
 .PHONY: deploy
 deploy:
+	@$(RUN) serverless --stage prod deploy
+
+.PHONY: deploy-dev
+deploy-dev:
 	@$(RUN) serverless --stage dev deploy
 
 .PHONY: shell
